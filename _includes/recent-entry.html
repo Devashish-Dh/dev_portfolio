@@ -3,7 +3,7 @@
 {% assign entry_image = include.item.thumbnail | default: include.item.image | default: include.item.cover %}
 <article class="entry-row entry-{{ include.item.type }}{% unless entry_image and entry_image != '' %} entry-no-image{% endunless %}">
   <div class="entry-side">
-    <time datetime="{{ include.item.date | date_to_xmlschema }}">{{ include.item.date | date: '%b %Y' }}</time>
+    <time datetime="{{ include.item.date | date_to_xmlschema }}">{% if include.item.year %}{{ include.item.year }}{% else %}{{ include.item.date | date: '%Y' }}{% endif %}</time>
     {% if entry_image and entry_image != '' %}
       <a class="entry-thumb-link" href="{{ include.item.url | relative_url }}">
         <img class="entry-thumb" src="{{ entry_image | relative_url }}" alt="{{ include.item.thumbnail_alt | default: include.item.title }}">

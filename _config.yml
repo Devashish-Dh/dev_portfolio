@@ -1,11 +1,11 @@
-locale: "en-US"
-title: "Your Name"
-description: "Software Engineer and Researcher"
-url: "https://yourname.github.io"
-baseurl: ""
-repository: "yourname/yourname.github.io"
-timezone: "Europe/Rome"
-logo: "/images/profile.svg"
+locale: "en-IN"
+title: "Devashish Dhaulakhandi"
+description: "GPU systems researcher working across program analysis, compilers, and Linux systems."
+url: "https://devashish-dh.github.io"
+baseurl: "/dev_portfolio"
+repository: "Devashish-Dh/dev_portfolio"
+timezone: "Asia/Kolkata"
+logo: "/images/devashish-profile.png"
 
 template:
   license_year: 2026
@@ -22,15 +22,15 @@ discussions:
   category_id: ""
 
 author:
-  name: "Your Name"
-  role: "Your Role"
-  education: "Your Second Role or Field of Study"
-  location: "Your City, Country"
-  email: ""
-  avatar: "/images/profile.svg"
-  cv: ""
-  github: "https://github.com/yourname"
-  linkedin: "https://www.linkedin.com/in/yourname"
+  name: "Devashish Dhaulakhandi"
+  role: "GPU Systems Researcher"
+  education: "M.Tech. (Research), IISc"
+  location: "Bengaluru, India"
+  email: "devashishd@iisc.ac.in"
+  avatar: "/images/devashish-profile.png"
+  cv: "/files/devashish_dhaulakhandi_cv.pdf"
+  github: "https://github.com/Devashish-Dh"
+  linkedin: "https://www.linkedin.com/in/devashish-dhaulakhandi-8305562bb/"
   scholar: ""
   orcid: ""
 
@@ -40,12 +40,9 @@ languages:
     - code: en
       label: "EN"
       home_url: "/"
-    - code: it
-      label: "IT"
-      home_url: "/it/"
 
 appearance:
-  accent_color: "#2b2b2b"
+  accent_color: "#007ea7"
   recent_items_on_home: 5
   background_pattern: "grid"
   theme_mode: "auto"
@@ -62,6 +59,8 @@ exclude:
   - CODE_OF_CONDUCT.md
   - SECURITY.md
   - CNAME.example
+  - docs
+  - scripts
   - Gemfile
   - Gemfile.lock
   - vendor

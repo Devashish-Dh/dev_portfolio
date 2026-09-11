@@ -3,17 +3,35 @@
 {% assign projects_only = site.pages | where: 'type', 'project' %}
 {% assign articles_only = site.pages | where: 'type', 'article' %}
 {% assign lang_entries = projects_only | concat: articles_only | where: 'lang', current_lang %}
-<div class="profile">
-  {% if site.author.avatar and site.author.avatar != '' %}<img class="profile-photo" src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }} {{ t.accessibility.profile_photo_suffix }}">{% endif %}
-  <div>
-    {% if site.author.name and site.author.name != '' %}<h1>{{ site.author.name }}</h1>{% endif %}
-    {% if site.author.role != '' or site.author.education != '' or site.author.location != '' %}<p>{% if site.author.role and site.author.role != '' %}<b>{{ site.author.role }}.</b>{% endif %} {% if site.author.education and site.author.education != '' %}<b>{{ site.author.education }}.</b>{% endif %} {% if site.author.location and site.author.location != '' %}<b>{{ site.author.location }}.</b>{% endif %}</p>{% endif %}
-    {% if site.author.email and site.author.email != '' %}<p class="small"><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>{% endif %}
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">GPU SYSTEMS / PROGRAM ANALYSIS / COMPILERS</p>
+    <h1>{{ site.author.name }}</h1>
+    <p class="hero-title">Building tools that make GPU programs safer, explainable, and easier to optimize.</p>
+    <div class="hero-meta"><span>{{ site.author.role }}</span><span>{{ site.author.education }}</span><span>{{ site.author.location }}</span></div>
+    <div class="hero-actions">
+      <a class="button button-primary" href="{{ '/work/' | relative_url }}">Explore selected work</a>
+      <a class="button" href="{{ site.author.cv | relative_url }}">Download CV</a>
+    </div>
   </div>
-</div>
+  {% if site.author.avatar and site.author.avatar != '' %}
+  <div class="hero-mark">
+    <img class="profile-photo" src="{{ site.author.avatar | relative_url }}" alt="GitHub identicon for {{ site.author.name }}">
+    <span>DEVASHISH-DH</span>
+  </div>
+  {% endif %}
+</section>
 
-<h2 class="section-title no-rule">{{ t.home.about_title }}</h2>
-<div class="about-text">{% for paragraph in t.about %}<p>{{ paragraph }}</p>{% endfor %}</div>
+<section class="profile-summary">
+  <div><p class="section-kicker">{{ t.home.about_title }}</p><h2>Research grounded in working systems.</h2></div>
+  <div class="about-text">{% for paragraph in t.about %}<p>{{ paragraph }}</p>{% endfor %}</div>
+</section>
+
+<div class="focus-grid" aria-label="Research areas">
+  <div><span>01</span><h3>GPU correctness</h3><p>Race detection, memory safety, and concurrency behavior.</p></div>
+  <div><span>02</span><h3>Compiler analysis</h3><p>Control, data-flow, and memory reasoning over LLVM/NVVM IR.</p></div>
+  <div><span>03</span><h3>Systems implementation</h3><p>CUDA runtimes, Linux kernel work, eBPF, and performance profiling.</p></div>
+</div>
 
 {% if lang_entries.size > 0 %}
 <h2 class="section-title">{{ t.home.recent_title }}</h2>
