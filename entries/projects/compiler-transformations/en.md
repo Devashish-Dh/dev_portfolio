@@ -8,29 +8,19 @@ permalink: /entries/compiler-transformations/
 date: 2026-05-01
 year: 2026
 label: "COMPILERS"
-role: "LLVM dataflow analysis and MLIR transformation passes"
+role: "LLVM and MLIR compiler passes"
 technologies: [LLVM, MLIR, Dataflow Analysis, Affine Dialect]
 code: "https://github.com/Devashish-Dh/ModernCompilers-Hoist-Anticipated-Exp-MLIR-Affine-Loop-Interchange"
 demo: ""
 paper: ""
 show_cover: false
-excerpt: "LLVM anticipated-expression analysis with safe code hoisting, plus an MLIR affine loop-interchange pass guided by locality and parallelism."
+excerpt: "Two compiler projects: anticipated-expression analysis and code hoisting in LLVM, and affine loop interchange in MLIR."
 ---
 
-## Anticipated expressions and code hoisting
+## LLVM: anticipated expressions
 
-I implemented backward anticipated-expressions analysis in LLVM using per-basic-block GEN/KILL sets and fixed-point dataflow propagation.
+This project implements backward anticipated-expression analysis in LLVM using per-basic-block GEN/KILL sets and fixed-point dataflow propagation. The resulting information is used to hoist expressions when speculative execution is safe and the operands dominate the new location.
 
-The analysis identifies safe code-hoisting opportunities and checks speculative-execution safety and operand dominance before transforming the program.
+## MLIR: affine loop interchange
 
-## Affine loop interchange
-
-I implemented an MLIR pass for affine loop interchange. The pass analyzes loop nests and uses locality and parallelism properties to choose among legal permutations.
-
-## What this demonstrates
-
-- Classical compiler dataflow analysis
-- Dominance and transformation-safety reasoning
-- LLVM pass implementation
-- MLIR affine-dialect transformations
-
+The second component is an MLIR pass for affine loop interchange. It analyzes affine loop nests, checks which permutations are legal, and selects an ordering based on locality and parallelism.

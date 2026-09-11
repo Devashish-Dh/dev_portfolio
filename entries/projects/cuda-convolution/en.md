@@ -8,29 +8,21 @@ permalink: /entries/cuda-convolution/
 date: 2026-04-01
 year: 2025-2026
 label: "GPU PERFORMANCE"
-role: "Kernel implementation, optimization, and profiling"
+role: "CUDA kernel optimization and profiling"
 technologies: [CUDA C++, Shared Memory, Nsight Compute, Nsight Systems]
 code: "https://github.com/Devashish-Dh/2D_conv_CUDA"
 demo: ""
 paper: ""
 show_cover: false
-excerpt: "A progression of CUDA convolution kernels using coalescing, shared-memory tiling, data reuse, and profiler-guided optimization."
+excerpt: "A set of CUDA 2D convolution kernels, progressively optimized using coalesced access, shared-memory tiling, and data reuse."
 ---
 
-## Implementation
+## CUDA kernels
 
-I implemented and optimized 2D convolution kernels in CUDA C/C++. The optimized versions improve memory behavior through coalesced accesses, shared-memory tiling, and data reuse.
+The project develops several versions of a 2D convolution kernel in CUDA C/C++, beginning with a straightforward implementation and progressively improving memory access through coalescing, shared-memory tiling, and data reuse.
 
-GPU results are checked against a CPU reference to separate performance work from correctness failures.
+Each GPU version is validated against a CPU reference before performance is compared.
 
 ## Performance analysis
 
-I used Nsight Compute and Nsight Systems to inspect memory traffic, kernel execution, and performance bottlenecks. The repository includes the implementation, reports, and profiler captures.
-
-## What this demonstrates
-
-- CUDA kernel optimization
-- GPU memory-hierarchy reasoning
-- Profiler-driven performance investigation
-- CPU/GPU correctness validation
-
+Nsight Compute and Nsight Systems are used to study memory traffic, kernel execution, and the remaining bottlenecks. The repository includes the kernels, reports, and profiler captures.
