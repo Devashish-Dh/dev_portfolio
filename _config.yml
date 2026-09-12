@@ -5,7 +5,7 @@ url: "https://devashish-dh.github.io"
 baseurl: "/dev_portfolio"
 repository: "Devashish-Dh/dev_portfolio"
 timezone: "Asia/Kolkata"
-logo: "/images/devashish-profile.png"
+logo: "/images/devashish-profile.jpg"
 
 template:
   license_year: 2026
@@ -27,7 +27,7 @@ author:
   education: "M.Tech. (Research), IISc"
   location: "Bengaluru, India"
   email: "devashishd@iisc.ac.in"
-  avatar: "/images/devashish-profile.png"
+  avatar: "/images/devashish-profile.jpg"
   cv: "/files/devashish_dhaulakhandi_cv.pdf"
   github: "https://github.com/Devashish-Dh"
   linkedin: "https://www.linkedin.com/in/devashish-dhaulakhandi-8305562bb/"

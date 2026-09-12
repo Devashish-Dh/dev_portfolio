@@ -646,7 +646,7 @@ body {
 
 .timeline-item {
   display: grid;
-  grid-template-columns: 48px 150px minmax(0, 1fr);
+  grid-template-columns: 68px 150px minmax(0, 1fr);
   gap: 26px;
   padding: 30px;
   border: 1px solid var(--border);
@@ -655,13 +655,18 @@ body {
 }
 
 .org-logo {
-  width: 44px;
-  height: 44px;
-  padding: 5px;
+  width: 60px;
+  height: 60px;
+  padding: 6px;
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 14px;
   background: #ffffff;
   object-fit: contain;
+}
+
+.org-logo-stack {
+  display: grid;
+  gap: 8px;
 }
 
 .timeline-link {
@@ -872,7 +877,7 @@ body {
 
 @media (max-width: 780px) {
   .timeline-item {
-    grid-template-columns: 48px minmax(0, 1fr);
+    grid-template-columns: 68px minmax(0, 1fr);
     gap: 14px;
   }
 
