@@ -1,22 +1,17 @@
 (function () {
-  var selectors = [
-    '.hero-copy',
-    '.hero-mark',
-    '.profile-summary',
-    '.focus-grid > div',
-    '.entry-row',
-    '.item',
-    '.timeline-item',
-    '.about-section',
-    '.skills-panel'
+  var specs = [
+    ['.section-kicker', 'reveal-left'],
+    ['.section-title', 'reveal-left'],
+    ['.page-heading', 'reveal'],
+    ['.mini-row', 'reveal'],
+    ['.profile-summary', 'reveal'],
+    ['.focus-grid > div', 'reveal'],
+    ['.entry-row', 'reveal'],
+    ['.rail-item', 'reveal'],
+    ['.timeline-item', 'reveal'],
+    ['.about-section', 'reveal'],
+    ['.skills-panel', 'reveal']
   ];
-
-  var groups = [];
-  selectors.forEach(function (sel) {
-    var nodes = document.querySelectorAll(sel);
-    if (nodes.length) groups.push(Array.prototype.slice.call(nodes));
-  });
-  if (!groups.length) return;
 
   if (!('IntersectionObserver' in window) ||
       window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -24,13 +19,15 @@
   }
 
   var targets = [];
-  groups.forEach(function (nodes) {
+  specs.forEach(function (spec) {
+    var nodes = document.querySelectorAll(spec[0]);
     nodes.forEach(function (el, i) {
-      el.classList.add('reveal');
-      el.style.transitionDelay = Math.min(i, 5) * 60 + 'ms';
+      el.classList.add(spec[1]);
+      el.style.transitionDelay = Math.min(i, 5) * 70 + 'ms';
       targets.push(el);
     });
   });
+  if (!targets.length) return;
 
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {

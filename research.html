@@ -1,0 +1,32 @@
+---
+layout: site
+title: Research
+permalink: /research/
+---
+<article class="experience-page research-page">
+  <div class="page-heading">
+    <div>
+      <p class="eyebrow">RESEARCH</p>
+      <h1 class="page-title">Research</h1>
+      <p class="page-intro">Research-driven systems work across GPU software, navigation, and data infrastructure.</p>
+    </div>
+  </div>
+
+  <section class="timeline" aria-label="Research timeline">
+    <article class="timeline-item">
+      <img class="org-logo" src="{{ '/images/logos/iisc.svg' | relative_url }}" alt="Indian Institute of Science logo">
+      <div class="timeline-date">2025 - PRESENT</div>
+      <div><p class="timeline-org">Indian Institute of Science</p><h2>GPU Program Analysis Research</h2><p>Developing program analyses over LLVM/NVVM IR to identify correctness and performance issues in CUDA programs, with emphasis on control flow, data flow, and memory behavior.</p></div>
+    </article>
+    <article class="timeline-item">
+      <img class="org-logo" src="{{ '/images/logos/iisc.svg' | relative_url }}" alt="Indian Institute of Science logo">
+      <div class="timeline-date">SEP 2026</div>
+      <div><p class="timeline-org">Indian Institute of Science</p><h2><a class="timeline-link" href="{{ '/entries/trinity/' | relative_url }}">Trinity: GPU Memory Safety</a></h2><p>Contributed to a static-analysis tool for GPU race detection and memory safety. The associated manuscript has been submitted for publication.</p></div>
+    </article>
+    <article class="timeline-item">
+      <img class="org-logo" src="{{ '/images/logos/iisc.svg' | relative_url }}" alt="Indian Institute of Science logo">
+      <div class="timeline-date">AUG 2026</div>
+      <div><p class="timeline-org">Independent Reimplementation</p><h2><a class="timeline-link" href="{{ '/entries/supercollider/' | relative_url }}">SuperCollider</a></h2><p>Reimplemented the NVIDIA Research PLDI 2026 design using LLVM instrumentation and a GPU runtime. Extended the system to asynchronous memory operations and additional GPU concurrency patterns.</p></div>
+    </article>
+  </section>
+</article>

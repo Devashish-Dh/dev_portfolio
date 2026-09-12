@@ -4,6 +4,8 @@ navigation:
       url: "/"
     - title: "Selected Work"
       url: "/work/"
+    - title: "Research"
+      url: "/research/"
     - title: "Experience"
       url: "/experience/"
     - title: "About"

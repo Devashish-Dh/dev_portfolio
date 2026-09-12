@@ -22,16 +22,42 @@
   {% endif %}
 </section>
 
-<section class="profile-summary">
-  <div><p class="section-kicker">{{ t.home.about_title }}</p><h2>Research grounded in working systems.</h2></div>
-  <div class="about-text">{% for paragraph in t.about %}<p>{{ paragraph }}</p>{% endfor %}</div>
+<section class="home-section" aria-label="Experience summary">
+  <p class="section-kicker">Experience</p>
+  <div class="mini-list">
+    <a class="mini-row" href="{{ '/experience/' | relative_url }}">
+      <span class="mini-date">NOV 2024 - MAR 2025</span>
+      <span class="mini-main"><strong>Space Applications Centre, ISRO</strong><span>Research Intern, Navigation and Receivers' Division</span></span>
+      <span class="writing-arrow" aria-hidden="true">&rarr;</span>
+    </a>
+    <a class="mini-row" href="{{ '/experience/' | relative_url }}">
+      <span class="mini-date">JUL - SEP 2024</span>
+      <span class="mini-main"><strong>CAIR, DRDO</strong><span>Project Trainee, Information and Systems Division</span></span>
+      <span class="writing-arrow" aria-hidden="true">&rarr;</span>
+    </a>
+  </div>
 </section>
 
-<div class="focus-grid" aria-label="Research areas">
-  <div><span>01</span><h3>GPU correctness</h3><p>Race detection, memory safety, and concurrency behavior.</p></div>
-  <div><span>02</span><h3>Compiler analysis</h3><p>Control, data-flow, and memory reasoning over LLVM/NVVM IR.</p></div>
-  <div><span>03</span><h3>Systems implementation</h3><p>CUDA runtimes, Linux kernel work, eBPF, and performance profiling.</p></div>
-</div>
+<section class="home-section" aria-label="Research summary">
+  <p class="section-kicker">Research</p>
+  <div class="mini-list">
+    <a class="mini-row" href="{{ '/research/' | relative_url }}">
+      <span class="mini-date">2025 - PRESENT</span>
+      <span class="mini-main"><strong>Indian Institute of Science</strong><span>GPU Program Analysis Research</span></span>
+      <span class="writing-arrow" aria-hidden="true">&rarr;</span>
+    </a>
+    <a class="mini-row" href="{{ '/entries/trinity/' | relative_url }}">
+      <span class="mini-date">SEP 2026</span>
+      <span class="mini-main"><strong>Indian Institute of Science</strong><span>Trinity: GPU Memory Safety</span></span>
+      <span class="writing-arrow" aria-hidden="true">&rarr;</span>
+    </a>
+    <a class="mini-row" href="{{ '/entries/supercollider/' | relative_url }}">
+      <span class="mini-date">AUG 2026</span>
+      <span class="mini-main"><strong>Independent Reimplementation</strong><span>SuperCollider</span></span>
+      <span class="writing-arrow" aria-hidden="true">&rarr;</span>
+    </a>
+  </div>
+</section>
 
 {% if lang_entries.size > 0 %}
 <h2 class="section-title">{{ t.home.recent_title }}</h2>
