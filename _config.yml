@@ -42,7 +42,7 @@ languages:
       home_url: "/"
 
 appearance:
-  accent_color: "#007ea7"
+  accent_color: "#4756b0"
   recent_items_on_home: 5
   background_pattern: "grid"
   theme_mode: "auto"
